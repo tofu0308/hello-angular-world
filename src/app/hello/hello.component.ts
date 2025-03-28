@@ -8,4 +8,9 @@ import { Component } from '@angular/core'
 })
 export class HelloComponent {
   message: string = 'Hello, Angular!'
+
+  updateMessage(newMessage: string) {
+    this.message = newMessage
+    console.log(newMessage)
+  }
 }

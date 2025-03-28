@@ -1,1 +1,9 @@
 <p>{{ message }}</p>
+<button
+  (click)="updateMessage('Single Click detected!')"
+  (dblclick)="updateMessage('Double Click detected!')"
+  (mouseover)="updateMessage('Button Hovered!')"
+  (mouseleave)="updateMessage('Hello, Angular!')"
+>
+  Click
+</button>
