@@ -7,3 +7,6 @@
 >
   Click
 </button>
+<hr />
+<p *ngIf="isVisible">このメッセージは表示状態によって変わります。</p>
+<button (click)="toggleVisibility()">切り替え</button>
