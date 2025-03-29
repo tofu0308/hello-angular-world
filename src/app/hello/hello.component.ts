@@ -1,9 +1,9 @@
 import { Component } from '@angular/core'
-import { NgIf } from '@angular/common'
+import { NgIf, NgFor } from '@angular/common'
 
 @Component({
   selector: 'app-hello',
-  imports: [NgIf],
+  imports: [NgIf, NgFor],
   templateUrl: './hello.component.html',
   styleUrl: './hello.component.scss',
 })
@@ -19,4 +19,6 @@ export class HelloComponent {
   toggleVisibility() {
     this.isVisible = !this.isVisible
   }
+
+  items: string[] = ['Apple', 'Banana', 'Cherry']
 }

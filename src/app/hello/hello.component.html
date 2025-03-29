@@ -10,3 +10,8 @@
 <hr />
 <p *ngIf="isVisible">このメッセージは表示状態によって変わります。</p>
 <button (click)="toggleVisibility()">切り替え</button>
+<hr />
+
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
