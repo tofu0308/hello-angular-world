@@ -12,12 +12,14 @@
 <button (click)="toggleVisibility()">切り替え</button>
 <hr />
 
-<ul>
+<ul *ngIf="items.length > 0">
   <li *ngFor="let item of items; let i = index">
     {{ item }}
     <button (click)="removeItem(i)">Remove</button>
   </li>
 </ul>
+
+<p *ngIf="items.length === 0">No items found</p>
 
 <input #newItem type="text" />
 <button (click)="addItem(newItem.value); newItem.value = ''">Add Item</button>
