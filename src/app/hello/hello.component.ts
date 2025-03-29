@@ -21,4 +21,11 @@ export class HelloComponent {
   }
 
   items: string[] = ['Apple', 'Banana', 'Cherry']
+  addItem(item: string): void {
+    this.items.push(item)
+  }
+
+  removeItem(index: number): void {
+    this.items.splice(index, 1)
+  }
 }
