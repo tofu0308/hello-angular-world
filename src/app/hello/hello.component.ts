@@ -40,4 +40,11 @@ export class HelloComponent {
   changeColor() {
     this.textColor = this.textColor === 'black' ? 'red' : 'black'
   }
+
+  items2 = ['Item 1', 'Item 2', 'Item 3', 'Item 4']
+  isHighlighted = false
+
+  toggleHighlight() {
+    this.isHighlighted = !this.isHighlighted
+  }
 }

@@ -31,3 +31,16 @@
 <hr />
 <p [ngStyle]="{ color: textColor }">This text changes color dynamically</p>
 <button (click)="changeColor()">Change Color</button>
+
+<hr />
+<ul>
+  <li
+    [ngClass]="{ highlighted: isHighlighted }"
+    *ngFor="let item of items2; let i = index"
+    [ngClass]="{ even: i % 2 === 0, odd: i % 2 !== 0 }"
+    [ngStyle]="{ 'font-size.px': 16 + i * 2, color: i % 2 === 0 ? 'blue' : 'red' }"
+  >
+    {{ item }}
+  </li>
+</ul>
+<button (click)="toggleHighlight()">Toggle Highlight</button>
