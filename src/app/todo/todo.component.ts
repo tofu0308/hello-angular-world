@@ -1,0 +1,32 @@
+import { Component } from '@angular/core'
+import { TodoService } from '../services/todo.service'
+import { NgFor } from '@angular/common'
+
+@Component({
+  selector: 'app-todo',
+  imports: [NgFor],
+
+  templateUrl: './todo.component.html',
+  styleUrl: './todo.component.scss',
+})
+export class TodoComponent {
+  todos: string[] = []
+
+  constructor(private todoService: TodoService) {}
+
+  ngOnInit() {
+    this.todos = this.todoService.getTodos()
+  }
+
+  addTodo(newTodo: string) {
+    if (newTodo) {
+      this.todoService.addTodo(newTodo)
+      this.todos = this.todoService.getTodos()
+    }
+  }
+
+  removeTodo(index: number) {
+    this.todoService.removeTodo(index)
+    this.todos = this.todoService.getTodos()
+  }
+}
