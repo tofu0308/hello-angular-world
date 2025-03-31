@@ -23,3 +23,11 @@
 
 <input #newItem type="text" />
 <button (click)="addItem(newItem.value); newItem.value = ''">Add Item</button>
+
+<hr />
+<p [ngClass]="{ active: isActive, inactive: !isActive }">This is a dynamic class example</p>
+<button (click)="toggleActive()">Toggle Class</button>
+
+<hr />
+<p [ngStyle]="{ color: textColor }">This text changes color dynamically</p>
+<button (click)="changeColor()">Change Color</button>

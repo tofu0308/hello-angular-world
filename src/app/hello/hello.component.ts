@@ -1,9 +1,9 @@
 import { Component } from '@angular/core'
-import { NgIf, NgFor } from '@angular/common'
+import { NgIf, NgFor, NgClass, NgStyle } from '@angular/common'
 
 @Component({
   selector: 'app-hello',
-  imports: [NgIf, NgFor],
+  imports: [NgIf, NgFor, NgClass, NgStyle],
   templateUrl: './hello.component.html',
   styleUrl: './hello.component.scss',
 })
@@ -27,5 +27,17 @@ export class HelloComponent {
 
   removeItem(index: number): void {
     this.items.splice(index, 1)
+  }
+
+  isActive: boolean = false
+
+  toggleActive() {
+    this.isActive = !this.isActive
+  }
+
+  textColor: string = 'black'
+
+  changeColor() {
+    this.textColor = this.textColor === 'black' ? 'red' : 'black'
   }
 }
