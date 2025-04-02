@@ -1,8 +1,9 @@
+<h2>Todo List</h2>
 <input #newTodo type="text" />
 <button (click)="addTodo(newTodo.value); newTodo.value = ''">Add Todo</button>
 
 <ul *ngIf="todos.length > 0">
-  <li *ngFor="let todo of todos; let i = index">
+  <li *ngFor="let todo of todos; let i = index; trackBy: trackByIndex">
     {{ todo }}
     <button (click)="removeTodo(i)">Remove</button>
   </li>

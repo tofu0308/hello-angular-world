@@ -29,4 +29,8 @@ export class TodoComponent {
     this.todoService.removeTodo(index)
     this.todos = this.todoService.getTodos()
   }
+
+  trackByIndex(index: number, item: string): number {
+    return index
+  }
 }
