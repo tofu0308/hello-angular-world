@@ -10,9 +10,11 @@ import { NgFor, NgIf } from '@angular/common'
   styleUrl: './todo.component.scss',
 })
 export class TodoComponent {
-  todos: string[] = []
+  constructor(private todoService: TodoService) {
+    console.log('TodoService instance created')
+  }
 
-  constructor(private todoService: TodoService) {}
+  todos: string[] = []
 
   ngOnInit() {
     this.todos = this.todoService.getTodos()
