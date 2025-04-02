@@ -1,10 +1,10 @@
 import { Component } from '@angular/core'
 import { TodoService } from '../services/todo.service'
-import { NgFor } from '@angular/common'
+import { NgFor, NgIf } from '@angular/common'
 
 @Component({
   selector: 'app-todo',
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
 
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss',

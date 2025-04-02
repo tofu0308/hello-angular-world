@@ -1,9 +1,11 @@
 <input #newTodo type="text" />
 <button (click)="addTodo(newTodo.value); newTodo.value = ''">Add Todo</button>
 
-<ul>
+<ul *ngIf="todos.length > 0">
   <li *ngFor="let todo of todos; let i = index">
     {{ todo }}
     <button (click)="removeTodo(i)">Remove</button>
   </li>
 </ul>
+
+<p *ngIf="todos.length === 0">No items found</p>
