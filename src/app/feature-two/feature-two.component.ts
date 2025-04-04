@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { ExampleService } from '../../services/example.service'
+import { ExampleService } from '../services/example.service'
 
 @Component({
   selector: 'app-feature-two',
